@@ -1,0 +1,252 @@
+/*Finalcss.css*/
+/* #~~는 id셀렉터  */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+* { /*전체 선택자*/
+    margin :0;   /*마진값 초기화*/
+    padding :0;   /*패딩값 초기화*/
+    box-sizing: border-box;   /*박스 영역은 테두리까지 지정*/
+
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+#container {
+    margin: 0 auto;  /*화면 중앙에 배치*/
+    width: 1200px;
+    
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(61, 25, 91);
+
+}
+
+#logo {   /* 로고(글씨) */
+    float: right;   /*오른쪽으로 플로팅*/
+    width: 250px;
+    height: 100px;
+    line-height: 100px;  /* height값과 같게 만들어서 세로로 중간에 오도록 맞 */
+    padding-left: 20px;  /* 왼쪽 패딩 지정*/
+
+}
+#logo h1 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 -1px 0 #222;  /* 그림자색 */
+}
+
+nav{
+    float: right;   /*오른쪽으로 플로팅*/
+    width: 900px;    /* 너비 */
+    height: 100px;   /* 네비게이션 영역 높이*/
+    padding-top: 40px; /* 메뉴를 아래로 내리기 위해 */
+}
+
+#topMenu {
+  height: 60px;
+}
+#topMenu > li {
+  float: left;  /*메뉴 항목을 왼쪽으로 플로팅 (세로로 있던걸 가로로 보여지게끔) */
+}
+
+#topMenu > li > a {
+  display: block;  /* 링크 텍스트는 블록으로*/
+  color: #fff;     /* 폰트 색상*/
+  font-weight: 600;  /* 폰트 굵기 */
+  text-shadow: 0 1px #07c;   /*그림자 추가*/
+  padding: 5px 70px;   /* 패딩 지정*/
+}
+
+#topMenu > li > a:hover {
+  color: #000;                  /* 마우스 포인터를 올리면 색상이 바뀜 */
+  text-shadow: 0 -1px #07c;     /* 글자가 굵어지지 않도록 지정 */
+}
+
+/*이미지 슬라이드쇼 영역*/
+#slideShow {
+    clear: both;       /* 플로팅 해제 */
+    width: 500px;       /* 너비 */
+    height: 350px;     /* 높이 */
+    overflow: hidden;  /*영역 넘어가도 보임 감춤*/
+    position: relative;
+    margin-left: 100px;
+
+}
+
+#slides {
+  position: absolute;
+  
+}
+
+#slides > img {
+  width: 100%;   /* 너비 */
+  float: left;   /* 가로로 배치 */
+}
+
+/*콘텐츠 영역*/
+#contents {
+  float: left;
+  width: 50%;
+  height: 300px;
+  margin-bottom: 300px;
+}
+
+
+
+/*퀵 링크 영역*/
+#links{
+    float: bottom;
+    width: 1200px;
+    height: 150px;
+    margin-top: 350px;
+  
+}
+
+#links ul {
+  padding: 0;
+  overflow: hidden;
+}
+
+#links ul li {
+  float: left;
+  width: 60px;
+  text-align: center;
+  margin: 50px 70px;
+}
+
+#links ul li a span {
+  display: block;                  /* 블록 레벨로 지정 */
+  margin: 0 auto;                  /* 가운데 배치 */
+  width: 60px;                    /* 가로, 세로 크기 */
+  height: 60px;
+  border-radius: 100%;             /* 테두리를 둥글게 */
+  line-height: 150px;              /* 수직으로 중간에 오게끔*/
+  border: 1px solid #ddd;
+  overflow: hidden;
+  
+}
+
+#icon1 {
+  background-image: url('images/tot.png');
+  background-size: cover;
+}
+
+#icon2 {
+  background-image: url('images/manchester\ city.png');
+  background-size: cover;
+}
+
+#icon3 {
+  background-image: url('images/manchaster\ united.png');
+  background-size: cover; 
+}
+
+#icon4 {
+  background-image: url('images/Arsenal-logo.png');
+  background-size: cover;
+}
+
+#icon5 {
+  background-image: url('images/Chelsea_FC_Logo.png');
+  background-size: cover;
+}
+
+#icon6 {
+  background-image: url('images/Liverpool_FC.png');
+  background-size: cover;
+}
+
+
+#tabMenu {
+  float: left;
+  width: 650px;
+  height: 100%;
+  margin-top: 10px;
+}
+
+#tabMenu input[type="radio"] {
+  display: none;
+}
+
+
+.tabContent h1 {
+  padding-bottom: 15px;
+  border-bottom: 5px solid #ddd;
+}
+
+#recentNews ul {
+  list-style: circle; 
+  margin-left: 20px;
+}
+
+#recentNews ul li {
+  font-style: italic;
+  font-size: 20px;
+  line-height: 2.5;
+}
+
+#tab1:checked ~ #recentNews{
+  display: block;
+}
+
+footer{
+    width: 200%;
+    height: 100px;
+    border-top: 2px solid #222; /* 위쪽에 가로선 추가*/
+}
+
+#bottomMenu {
+  width: 100%;
+  height: 20px;
+  position: relative;
+}
+
+#bottomMenu ul {
+  margin-top: 15px;
+}
+
+#bottomMenu ul li {
+  float: left;  /* 가로로 배치 */
+  padding: 5px 20px;
+  border-right: 1px solid #ddd;   /* 항목 오른쪽에 세로선*/
+}
+
+#bottomMenu ul li:last-child {
+  border-right: none;  /* 마지막 항목에는 세로선 X */
+}
+
+#bottomMenu ul li a, #bottomMenu ul li a:visited {
+  font-size: 15px;
+  color: #666;
+}
+
+#sns {
+  position: absolute;
+  right: 0;
+}
+
+#sns ul li {
+  border: none;
+  padding: 5px;
+  object-fit:scale-down;
+}
+
+#company {
+  clear: left;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+p {
+  font-size: 14px;
+  color: #aaa;
+}
